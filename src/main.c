@@ -1,8 +1,6 @@
 #include "vaultshell.h"
 #include <stdio.h>
 #include <signal.h>
-#include <unistd.h>
-#include <stdlib.h>
 
 void handle_sig(int sig)
 {
