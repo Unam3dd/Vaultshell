@@ -25,4 +25,4 @@ char *append_chr(char *buffer, char *src, size_t size_buffer);
 uint32_t is_pipe(char *buffer);
 uint32_t is_redirection(char *buffer);
 uint8_t is_redirection_append(char *buffer);
-char *erase_str(char *str, char chr, size_t len);
+char *erase_str(char *str, char chr);
