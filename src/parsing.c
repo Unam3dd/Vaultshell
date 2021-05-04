@@ -85,7 +85,7 @@ uint8_t is_redirection_append(char *buffer)
     return (0);
 }
 
-char *erase_str(char *str, char chr)
+char *erase_str(char *str, char chr, size_t len)
 {
     char *origin = str, *tmp = NULL, *save = NULL;
 

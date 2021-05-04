@@ -2,8 +2,16 @@
 #include <stdint.h>
 #include <stddef.h>
 
+typedef struct prompt_info
+{
+    char *user;
+    char *host;
+    char *path;
+} prompt_info_t;
+
 // console
-uint8_t prompt(const char *prompt, char *buffer, size_t size);
+uint8_t prompt(prompt_info_t *prompt, char *buffer, size_t size);
+uint8_t set_prompt_info(prompt_info_t *prompt, char *username, char *host, char *path);
 void clear_buffer(char *buffer, size_t size);
 
 // builtins
@@ -25,4 +33,4 @@ char *append_chr(char *buffer, char *src, size_t size_buffer);
 uint32_t is_pipe(char *buffer);
 uint32_t is_redirection(char *buffer);
 uint8_t is_redirection_append(char *buffer);
-char *erase_str(char *str, char chr);
+char *erase_str(char *str, char chr, size_t len);

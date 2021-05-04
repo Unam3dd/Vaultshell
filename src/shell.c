@@ -156,7 +156,7 @@ uint32_t execute_redirection(char *command)
 
     split_command(cmd, argv, " <>");
 
-    erase_str(out, ' ');
+    erase_str(out, ' ', strlen(out));
 
     fd = open(out, flag, S_IRWXU);
 
